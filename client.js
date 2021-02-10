@@ -14,10 +14,7 @@ const connect = function() {
    
     console.log('Server connection established.');
     conn.write('Name: KJL');
-    // conn.write("Move: up");
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 100);
+    
   });
   conn.on('end', () => {
     console.log('disconnected from server');
