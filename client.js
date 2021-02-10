@@ -14,12 +14,10 @@ const connect = function() {
    
     console.log('Server connection established.');
     conn.write('Name: KJL');
+   
     
   });
-  conn.on('end', () => {
-    console.log('disconnected from server');
-  });
-
+ 
   // interpret incoming data as text
   conn.setEncoding('utf8');
 
@@ -29,5 +27,5 @@ const connect = function() {
 
 
 module.exports = {
-  connect
+  connect,
 };
