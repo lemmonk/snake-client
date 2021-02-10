@@ -10,6 +10,11 @@ const connect = function() {
     console.log(data.toString());
     conn.end();
   });
+  conn.on('connect', () => {
+   
+    console.log('Server connection established.');
+    conn.write('Name: KJL');
+  });
   conn.on('end', () => {
     console.log('disconnected from server');
   });
