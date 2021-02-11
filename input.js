@@ -25,18 +25,30 @@ const handleUserInput = (key) =>{
     
     process.exit();
   }
-  if (key === 'w') {
+
+  switch (key) {
+  case 'w':
     connection.write('Move: up');
-  }
-  if (key === 'a') {
+    break;
+  case 'a':
     connection.write('Move: left');
-  }
-  if (key === 's') {
+    break;
+  case 's':
     connection.write('Move: down');
-  }
-  if (key === 'd') {
+    connection.write('Say: Snake Slithers Silly');
+    break;
+  case 'd':
     connection.write('Move: right');
+    break;
+  case 'm':
+    connection.write('Say: Coding Magic');
+    break;
+  default:
+    connection.write('Say: Mervvv...');
   }
+
+
+
 };
 
 module.exports = {setupInput};
